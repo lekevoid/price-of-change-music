@@ -1,8 +1,6 @@
 export default function useTracks() {
 	const tracks = import.meta.glob("/assets/music/*", { eager: true });
 
-	console.log(tracks);
-
 	const data = Object.values(tracks).map((t) => {
 		const track = t.default;
 		const title = track.match(/;(.+);/)?.[1];

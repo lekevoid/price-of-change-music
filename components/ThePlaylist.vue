@@ -6,6 +6,7 @@
 				:key="category.id"
 				:class="['tab', category.id, { active: currentCategory === category.id }]"
 				@click="setCategory(category.id)"
+				@dblclick="songTitleMode = !songTitleMode"
 			>
 				<img :src="category.icon" height="50" width="50" />
 				<div class="label">{{ category.label }}</div>
@@ -29,7 +30,8 @@
 									<div class="hover"></div>
 									<div class="active"></div>
 								</div>
-								<span class="label">{{ track.label }}</span>
+								<span class="label" v-if="songTitleMode">{{ track.title }}</span>
+								<span class="label" v-if="!songTitleMode">{{ track.label }}</span>
 								<span v-if="category.id === 'ambience'" :class="`intensity int_${track.intensity}`">{{ track.intensity }}</span>
 							</div>
 						</div>
@@ -66,6 +68,7 @@ export default {
 			},
 			availableCategories: {},
 			mounted: false,
+			songTitleMode: false,
 		};
 	},
 	computed: {

@@ -13,7 +13,10 @@ export default function useTracks() {
 			label = title;
 		}
 
-		const id = (title.replace(/[^\w]+/g, "") + label.replace(/[^\w]+/g, "")).toLowerCase();
+		let id = "";
+		if (title && label) {
+			id = title.toLowerCase().replace(/[^\w]+/g, "") + label.toLowerCase().replace(/[^\w]+/g, "");
+		}
 
 		return { filepath: track, id, title, label, category: category.toLowerCase(), subcategory: subcategory.toLowerCase(), intensity };
 	});

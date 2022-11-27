@@ -8,6 +8,7 @@
 				@click="setCategory(category.id)"
 			>
 				<img :src="category.icon" height="50" width="50" />
+				<div class="label">{{ category.label }}</div>
 			</div>
 		</div>
 		<main>

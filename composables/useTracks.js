@@ -2,7 +2,7 @@ export default function useTracks() {
 	const tracks = import.meta.glob("/assets/music/*", { eager: true });
 
 	const data = Object.values(tracks).map((t) => {
-		const track = t.default;
+		const track = decodeURI(t.default);
 		const parts = track.match(/\([^)]+\)/g);
 		const category = parts[0].replace(/[()]/g, "").toLowerCase();
 		const subcategory = parts[1].replace(/[()]/g, "").toLowerCase();

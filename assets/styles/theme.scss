@@ -1,0 +1,51 @@
+@font-face {
+	font-family: "Umber";
+	font-weight: 500;
+	font-display: swap;
+	src: url("./assets/fonts/Umber SSi Regular.woff2") format("woff2"),
+		url("./assets/fonts/Umber SSi Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Summer";
+	font-weight: 500;
+	font-display: swap;
+	src: url("./assets/fonts/University Roman Regular.woff2") format("woff2"),
+		url("./assets/fonts/University Roman Regular.woff") format("woff");
+}
+
+$mainColor:#AA0;
+$mainColorDark:darken($mainColor, 20%);
+$mainColorWithTransparency:rgba($mainColor, 0.5);
+$mainColorDarkWithTransparency:rgba($mainColorDark, 0.5);
+
+$activeColor:complement($mainColor);
+$activeColorDark:darken($activeColor, 20%);
+$activeColorWithTransparency:rgba($activeColor, 0.8);
+$activeColorDarkWithTransparency:rgba($activeColorDark, 0.8);
+
+$hoverColor:#0AF;
+$hoverColorDark:darken($hoverColor, 20%);
+$hoverColorWithTransparency:rgba($hoverColor, 0.5);
+$hoverColorDarkWithTransparency:rgba($hoverColorDark, 0.5);
+
+
+:root {
+	--text-color: #FFF;
+	--track-button-gradient-color-light: #{$mainColorWithTransparency};
+	--track-button-gradient-color-dark: #{$mainColorDarkWithTransparency};
+	--track-button-gradient-hover-color-light: #{$hoverColorWithTransparency};
+	--track-button-gradient-hover-color-dark: #{$hoverColorDarkWithTransparency};
+	--track-button-gradient-active-color-light: #{$activeColorWithTransparency};
+	--track-button-gradient-active-color-dark: #{$activeColorDarkWithTransparency};
+	--intensity-1: rgba(0, 255, 255, 0.6);
+	--intensity-2: rgba(0, 255, 0, 0.6);
+	--intensity-3: rgba(255, 255, 0, 0.6);
+	--intensity-4: rgba(255, 150, 0, 0.6);
+	--intensity-5: rgba(255, 0, 0, 0.6);
+
+	--font-h1: "Umber";
+	--font-h2: "Umber";
+	--font-h3: "Summer";
+	--font-p: "Verdana";
+}

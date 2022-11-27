@@ -1,0 +1,55 @@
+body {
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+}
+
+div,
+main,
+section {
+	box-sizing: border-box;
+	position: relative;
+}
+
+#__nuxt {
+	background: #000 url("./assets/img/bg.jpg") center center no-repeat;
+	background-size: cover;
+	height: 100vh;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	text-transform: capitalize;
+}
+
+h1 {
+	font-family: var(--font-h1);
+}
+
+h2 {
+	font-family: var(--font-h2);
+	font-size: 40px;
+	margin: 0;
+}
+
+h3 {
+	font-family: var(--font-h3);
+	font-size: 24px;
+	margin: 0.8em 0 0.4em;
+}
+
+
+.track {
+	font-family: var(--font-p);
+	font-weight: bold;
+}

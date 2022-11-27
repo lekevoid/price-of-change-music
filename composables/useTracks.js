@@ -3,24 +3,21 @@ export default function useTracks() {
 
 	const data = Object.values(tracks).map((t) => {
 		const track = t.default;
-		const title = track.match(/;(.+);/)?.[1];
-		const category = track.match(/\((.+)\)/)?.[1];
-		const subcategory = track.match(/\[(.+)\]/)?.[1];
-		const intensity = track.match(/\{(\d+)\}/)?.[1];
-		let label = track.match(/!(.+)!/)?.[1];
+		const parts = track.match(/\([^)]+\)/g);
+		const category = parts[0].replace(/[()]/g, "").toLowerCase();
+		const subcategory = parts[1].replace(/[()]/g, "").toLowerCase();
+		let label = parts[2].replace(/[()]/g, "");
+		const title = parts[3].replace(/[()]/g, "");
+		const intensity = parts?.[4].replace(/[()]/g, "") || "";
 
 		if (label === "Label") {
 			label = title;
 		}
 
-		let id = "";
-		if (typeof title === "string" && typeof label === "string") {
-			const start = (title + label).toLowerCase();
-			console.log(start);
-			id = start.replace(/[^\w]+/g, "");
-		}
+		const id = `${title + label}`.toLowerCase().replace(/[^\w]+/g, "");
 
-		return { filepath: track, id, title, label, category: category.toLowerCase(), subcategory: subcategory.toLowerCase(), intensity };
+		const out = { filepath: track, id, title, label, category, subcategory, intensity };
+		return out;
 	});
 
 	return data;

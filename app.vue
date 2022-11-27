@@ -11,28 +11,30 @@
 			</div>
 		</div>
 		<main>
-			<section v-for="category in availableCategories" :key="category.id" :class="[category.id, { active: currentCategory === category.id }]">
-				<h2>{{ category.label }}</h2>
-				<div class="list">
-					<div class="subcategory" v-for="subcategory in subcategories[currentCategory]">
-						<h3>{{ subcategory }}</h3>
-						<div
-							v-for="track in orderedTracks[category.id][subcategory]"
-							:class="['track', { active: currentTrack.id === track.id }]"
-							@click="playTrack(track.id)"
-							:key="track.id"
-						>
-							<div class="bg">
-								<div class="normal"></div>
-								<div class="hover"></div>
-								<div class="active"></div>
+			<div class="inner">
+				<section v-for="category in availableCategories" :key="category.id" :class="[category.id, { active: currentCategory === category.id }]">
+					<h2>{{ category.label }}</h2>
+					<div class="list">
+						<div class="subcategory" v-for="subcategory in subcategories[currentCategory]">
+							<h3>{{ subcategory }}</h3>
+							<div
+								v-for="track in orderedTracks[category.id][subcategory]"
+								:class="['track', { active: currentTrack.id === track.id }]"
+								@click="playTrack(track.id)"
+								:key="track.id"
+							>
+								<div class="bg">
+									<div class="normal"></div>
+									<div class="hover"></div>
+									<div class="active"></div>
+								</div>
+								<span class="label">{{ track.label }}</span>
+								<span v-if="category.id === 'ambience'" :class="`intensity int_${track.intensity}`">{{ track.intensity }}</span>
 							</div>
-							<span class="label">{{ track.label }}</span>
-							<span v-if="category.id === 'ambience'" :class="`intensity int_${track.intensity}`">{{ track.intensity }}</span>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</main>
 		<div class="player">
 			<div class="track_title">{{ currentTrack.title }}</div>
@@ -103,7 +105,6 @@ export default {
 				out[category][subcategory].push(track);
 			}
 
-			console.log(out);
 			return out;
 		},
 	},

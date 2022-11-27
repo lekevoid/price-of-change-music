@@ -74,9 +74,11 @@
 
 		img {
 			display: inline-block;
+			filter: drop-shadow(0 0 12px rgba(#FFF, 0));
 			height: auto;
 			max-height: 100%;
 			object-fit: contain;
+			transition: filter 0.3s;
 			width: auto;
 		}
 
@@ -86,6 +88,7 @@
 
 			img {
 				animation: boop 0.3s ease-in-out 0s 1 normal forwards running;
+				filter: drop-shadow(0 0 12px rgba(#FFF, 1));
 			}
 		}
 	}
@@ -113,9 +116,9 @@ main {
 
 		.list {
 			display: block;
+			overflow-x: auto;
 			width: 100%;
 			columns: 2;
-			overflow-x: auto;
 		}
 
 		.subcategory {

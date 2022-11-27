@@ -138,7 +138,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~/assets/styles/base";
-@import "~/assets/styles/theme";
 @import "~/assets/styles/view";
 </style>

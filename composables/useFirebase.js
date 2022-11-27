@@ -1,12 +1,9 @@
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { useFirebaseUser } from "./useState";
 
 export const signIn = async (email, password) => {
 	const auth = getAuth();
-	console.log(auth);
-	const credentials = await signInWithEmailAndPassword(auth, email, password).catch((error) => {
-		const errorCode = error.code;
-		const errorMessage = error.message;
-	});
+	const credentials = await signInWithEmailAndPassword(auth, email, password);
 	return credentials;
 };
 
@@ -17,11 +14,10 @@ export const signOut = async () => {
 
 export const initUser = async () => {
 	const auth = getAuth();
+	const firebaseUser = useFirebaseUser();
+	firebaseUser.value = auth.currentUser;
+
 	onAuthStateChanged(auth, (user) => {
-		if (user) {
-			const uid = user.uid;
-			console.log(uid);
-		} else {
-		}
+		firebaseUser.value = user;
 	});
 };

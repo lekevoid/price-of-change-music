@@ -4,7 +4,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 	const config = useRuntimeConfig();
 
 	const firebaseConfig = {
-		apiKey: config.firebaseApiKey,
+		apiKey: config.public.firebaseApiKey,
 		authDomain: "lekevoid-rpg-music.firebaseapp.com",
 		projectId: "lekevoid-rpg-music",
 		storageBucket: "lekevoid-rpg-music.appspot.com",

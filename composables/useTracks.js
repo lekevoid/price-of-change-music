@@ -15,7 +15,9 @@ export default function useTracks() {
 
 		let id = "";
 		if (typeof title === "string" && typeof label === "string") {
-			id = (title + label).toLowerCase().replace(/[^\w]+/g, "");
+			const start = (title + label).toLowerCase();
+			console.log(start);
+			id = start.replace(/[^\w]+/g, "");
 		}
 
 		return { filepath: track, id, title, label, category: category.toLowerCase(), subcategory: subcategory.toLowerCase(), intensity };

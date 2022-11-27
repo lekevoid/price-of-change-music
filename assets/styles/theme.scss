@@ -38,11 +38,11 @@ $hoverColorDarkWithTransparency:rgba($hoverColorDark, 0.5);
 	--track-button-gradient-hover-color-dark: #{$hoverColorDarkWithTransparency};
 	--track-button-gradient-active-color-light: #{$activeColorWithTransparency};
 	--track-button-gradient-active-color-dark: #{$activeColorDarkWithTransparency};
-	--intensity-1: rgba(0, 255, 255, 0.6);
-	--intensity-2: rgba(0, 255, 0, 0.6);
-	--intensity-3: rgba(255, 255, 0, 0.6);
-	--intensity-4: rgba(255, 150, 0, 0.6);
-	--intensity-5: rgba(255, 0, 0, 0.6);
+	--intensity-1: rgba(0, 150, 255, 0.7);
+	--intensity-2: rgba(0, 255, 0, 0.7);
+	--intensity-3: rgba(255, 255, 0, 0.7);
+	--intensity-4: rgba(255, 150, 0, 0.7);
+	--intensity-5: rgba(255, 0, 0, 0.7);
 
 	--font-h1: "Umber";
 	--font-h2: "Umber";

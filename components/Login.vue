@@ -13,8 +13,8 @@
 <script setup>
 const emit = defineEmits(["handleLogin"]);
 
-const email = ref("gagnon.kev@gmail.com");
-const password = ref("pocpoc");
+const email = ref("");
+const password = ref("");
 
 async function login() {
 	const user = await signIn(email.value, password.value);

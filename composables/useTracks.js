@@ -8,7 +8,7 @@ export default function useTracks() {
 		const subcategory = parts[1].replace(/[()]/g, "").toLowerCase();
 		let label = parts[2].replace(/[()]/g, "");
 		const title = parts[3].replace(/[()]/g, "");
-		const intensity = parts?.[4].replace(/[()]/g, "") || "";
+		const intensity = parts?.[4]?.replace(/[()]/g, "") || "";
 
 		if (label === "Label") {
 			label = title;

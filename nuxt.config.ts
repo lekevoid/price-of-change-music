@@ -21,8 +21,8 @@ export default defineNuxtConfig({
 	},
 	pwa: {
 		manifest: {
-			name: "The Price of Change",
-			short_name: "The Price of Change",
+			name: "Children of the Machine",
+			short_name: "Children of the Machine",
 			background_color: "#000000",
 			theme_color: "#AAAA00",
 		},

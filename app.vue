@@ -7,7 +7,6 @@
 const firebaseUser = useFirebaseUser();
 
 function handleUser({ user }) {
-	console.log("from app", user);
 	if (user && user.uid) {
 		loggedIn.value = true;
 	}

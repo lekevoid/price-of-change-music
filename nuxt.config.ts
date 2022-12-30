@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 		head: {
 			charset: "utf-16",
 			viewport: "width=1024, initial-scale=1",
-			title: "The Price of Change",
+			title: "Children of the Machine",
 			meta: [
 				{ name: "description", content: "RPG music" },
 				{ name: "robots", content: "noindex nofollow" },
@@ -21,8 +21,8 @@ export default defineNuxtConfig({
 	},
 	pwa: {
 		manifest: {
-			name: "The Price of Change",
-			short_name: "The Price of Change",
+			name: "Children of the Machine",
+			short_name: "Children of the Machine",
 			background_color: "#000000",
 			theme_color: "#AAAA00",
 		},

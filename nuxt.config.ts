@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 		head: {
 			charset: "utf-16",
 			viewport: "width=1024, initial-scale=1",
-			title: "The Price of Change",
+			title: "Children of the Machine",
 			meta: [
 				{ name: "description", content: "RPG music" },
 				{ name: "robots", content: "noindex nofollow" },

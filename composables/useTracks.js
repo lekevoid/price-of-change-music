@@ -8,14 +8,14 @@ export default function useTracks() {
 	const data = Object.values(tracks).map((t) => {
 		const track = decodeURI(t.default);
 		const parts = track.match(/\([^)]+\)/g);
-		const category = parts[0].replace(/[()]/g, "").toLowerCase();
-		const subcategory = parts[1].replace(/[()]/g, "").toLowerCase();
+		const category = replaceChars(parts[0].replace(/[()]/g, "").toLowerCase());
+		const subcategory = replaceChars(parts[1].replace(/[()]/g, "").toLowerCase());
 		let label = replaceChars(parts[2].replace(/[()]/g, ""));
-		const title = parts[3].replace(/[()]/g, "");
+		const title = replaceChars(parts[3].replace(/[()]/g, ""));
 		const intensity = parts?.[4]?.replace(/[()]/g, "") || "";
 
 		if (label === "Label") {
-			label = replaceChars(title);
+			label = title;
 		}
 
 		const id = `${title + label}`.toLowerCase().replace(/[^\w]+/g, "");

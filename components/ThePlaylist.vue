@@ -141,7 +141,7 @@ const currentTrack = ref({ id: "", title: "", filepath: "" });
 
 function playTrack(filename) {
 	const track = tracks.value.find((t) => t.filename === filename);
-	this.currentTrack = { title: track.title, filepath: `/music/${track.filename}.mp3` };
+	currentTrack.value = { title: track.title, filepath: `/music/${track.filename}.mp3` };
 }
 
 function setCategory(to) {

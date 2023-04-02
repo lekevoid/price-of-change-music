@@ -1,0 +1,66 @@
+[
+	{
+		"filename": "Chrono Trigger - At the Bottom of the Night",
+		"category": "Locations",
+		"subcategory": "Ahsha's Office",
+		"label": "Happy",
+		"title": "Chrono Trigger - At the Bottom of the Night",
+		"intensity": 2
+	},
+	{
+		"filename": "Adrian von Ziegler - Autumn Forest - Night",
+		"category": "Locations",
+		"subcategory": "Forest",
+		"label": "Autumn Forest at Night",
+		"title": "Adrian von Ziegler - Autumn Forest",
+		"intensity": 2
+	},
+	{
+		"filename": "Adrian von Ziegler - Autumn Forest - Day",
+		"category": "Locations",
+		"subcategory": "Forest",
+		"label": "Autumn Forest in Daylight",
+		"title": "Adrian von Ziegler - Autumn Forest",
+		"intensity": 2
+	},
+	{
+		"filename": "Vyn & Laevi - Bee",
+		"category": "Locations",
+		"subcategory": "General",
+		"label": "Biodiversity Museum",
+		"title": "Vyn & Laevi - Bee",
+		"intensity": 2
+	},
+	{
+		"filename": "Michael FK - Lighthouse",
+		"category": "Locations",
+		"subcategory": "General",
+		"label": "Lighthouse",
+		"title": "Michael FK - Lighthouse",
+		"intensity": 1
+	},
+	{
+		"filename": "BFFL - Take A Second To Breathe",
+		"category": "Locations",
+		"subcategory": "Hubs",
+		"label": "City at Twilight",
+		"title": "BFFL - Take A Second To Breathe",
+		"intensity": 2
+	},
+	{
+		"filename": "Sweet Medicine - I Love the Night",
+		"category": "Locations",
+		"subcategory": "Hubs",
+		"label": "Walking through the City",
+		"title": "Sweet Medicine - I Love the Night",
+		"intensity": 2
+	},
+	{
+		"filename": "Kanisan - Fireflies",
+		"category": "Locations",
+		"subcategory": "Islands",
+		"label": "Île St-Quentin by Day",
+		"title": "Kanisan - Fireflies",
+		"intensity": 2
+	}
+]

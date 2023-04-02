@@ -1,0 +1,58 @@
+[
+	{
+		"filename": "Front Line Assembly - Social Enemy",
+		"category": "Action",
+		"subcategory": "Action",
+		"label": "Label",
+		"title": "Front Line Assembly - Social Enemy",
+		"intensity": 3
+	},
+	{
+		"filename": "Adrian Von Ziegler - Honō no Megami",
+		"category": "Action",
+		"subcategory": "Combat",
+		"label": "Dark Asian Combat",
+		"title": "Adrian Von Ziegler - Honō no Megami",
+		"intensity": 3
+	},
+	{
+		"filename": "Chaos Vector - Psyborg",
+		"category": "Action",
+		"subcategory": "Combat",
+		"label": "Label",
+		"title": "Chaos Vector - Psyborg",
+		"intensity": 4
+	},
+	{
+		"filename": "Dav Dralleon - Everflame",
+		"category": "Action",
+		"subcategory": "Combat",
+		"label": "Label",
+		"title": "Dav Dralleon - Everflame",
+		"intensity": 4
+	},
+	{
+		"filename": "Head Splitter - Kyoto",
+		"category": "Action",
+		"subcategory": "Combat",
+		"label": "Label",
+		"title": "Head Splitter - Kyoto",
+		"intensity": 4
+	},
+	{
+		"filename": "Vampire Redemption - Dark Ages Boss 2",
+		"category": "Action",
+		"subcategory": "Combat",
+		"label": "Ugly Boss",
+		"title": "Vampire Redemption - Dark Ages Boss 2",
+		"intensity": 3
+	},
+	{
+		"filename": "Atrium Carceri - Identity Theft",
+		"category": "Action",
+		"subcategory": "Stealth",
+		"label": "Still not uncovered",
+		"title": "Atrium Carceri - Identity Theft",
+		"intensity": 1
+	}
+]

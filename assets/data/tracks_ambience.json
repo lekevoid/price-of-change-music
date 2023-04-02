@@ -1,0 +1,322 @@
+[
+	{
+		"filename": "Apocryphos - A Feral Night",
+		"category": "Ambience",
+		"subcategory": "Darkness",
+		"label": "Label",
+		"title": "Apocryphos - A Feral Night",
+		"intensity": 1
+	},
+	{
+		"filename": "Eroa - Stardust",
+		"category": "Ambience",
+		"subcategory": "Dreaming",
+		"label": "Advancing Into the Deep Dreaming",
+		"title": "Eroa - Stardust",
+		"intensity": 3
+	},
+	{
+		"filename": "Fox3r - Feel",
+		"category": "Ambience",
+		"subcategory": "Dreaming",
+		"label": "Feeling the Deep Deeaming",
+		"title": "Fox3r - Feel",
+		"intensity": 2
+	},
+	{
+		"filename": "Benjamin Piller - Horizons",
+		"category": "Ambience",
+		"subcategory": "Dreaming",
+		"label": "Gently Pushing the Dream Further",
+		"title": "Benjamin Piller - Horizons",
+		"intensity": 2
+	},
+	{
+		"filename": "Katahimikan - Shimmer",
+		"category": "Ambience",
+		"subcategory": "Dreaming",
+		"label": "Lost in a Disturbing Dream",
+		"title": "Katahimikan - Shimmer",
+		"intensity": 1
+	},
+	{
+		"filename": "Borrtex - Memoir of Solitude",
+		"category": "Ambience",
+		"subcategory": "General",
+		"label": "Label",
+		"title": "Borrtex - Memoir of Solitude",
+		"intensity": 2
+	},
+	{
+		"filename": "Hazy - Manifest",
+		"category": "Ambience",
+		"subcategory": "General",
+		"label": "Label",
+		"title": "Hazy - Manifest",
+		"intensity": 1
+	},
+	{
+		"filename": "Tymelapse - We Became Strangers",
+		"category": "Ambience",
+		"subcategory": "General",
+		"label": "Label",
+		"title": "Tymelapse - We Became Strangers",
+		"intensity": 1
+	},
+	{
+		"filename": "Hazy - It Is The Same",
+		"category": "Ambience",
+		"subcategory": "General",
+		"label": "Secret Moment with Loved One",
+		"title": "Hazy - It Is The Same",
+		"intensity": 1
+	},
+	{
+		"filename": "Vampire Redemption - Dark Ages Conversation",
+		"category": "Ambience",
+		"subcategory": "General",
+		"label": "Vampire Redemption - Dark Ages Conversation",
+		"title": "Vampire Redemption - Dark Ages Conversation",
+		"intensity": 2
+	},
+	{
+		"filename": "Northumbria - Vinland",
+		"category": "Ambience",
+		"subcategory": "Horror",
+		"label": "Contemplating the Inevitable",
+		"title": "Northumbria - Vinland",
+		"intensity": 1
+	},
+	{
+		"filename": "In Quantum - Oceanum Mortuis",
+		"category": "Ambience",
+		"subcategory": "Horror",
+		"label": "Exploring the Catacombs",
+		"title": "In Quantum - Oceanum Mortuis",
+		"intensity": 1
+	},
+	{
+		"filename": "Dead Melodies - The Manifestation",
+		"category": "Ambience",
+		"subcategory": "Horror",
+		"label": "Label",
+		"title": "Dead Melodies - The Manifestation",
+		"intensity": 1
+	},
+	{
+		"filename": "Northumbria - Helluland",
+		"category": "Ambience",
+		"subcategory": "Horror",
+		"label": "Waiting by the Cemetary",
+		"title": "Northumbria - Helluland",
+		"intensity": 1
+	},
+	{
+		"filename": "Combichrist - Wreckage",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Combichrist - Wreckage",
+		"intensity": 2
+	},
+	{
+		"filename": "Félperc - Outside",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Félperc - Outside",
+		"intensity": 2
+	},
+	{
+		"filename": "Félperc - Semmisem",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Félperc - Semmisem",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Andromeda",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Andromeda",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Beauty In The Darkness",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Beauty In The Darkness",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Dark City Terror",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Dark City Terror",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Egyptian Night Club",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Egyptian Night Club",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Futurism",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Futurism",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Midnight Utopia",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Midnight Utopia",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Mysterious Girl",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Mysterious Girl",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Night Walker",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Night Walker",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Nightmare of a Millenium",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Nightmare of a Millenium",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Rokk Tronic",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Rokk Tronic",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Secret To Life",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Secret To Life",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Shades of Black",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Shades of Black",
+		"intensity": 2
+	},
+	{
+		"filename": "Synthwave - Shadow Cop",
+		"category": "Ambience",
+		"subcategory": "Hubs",
+		"label": "Label",
+		"title": "Synthwave - Shadow Cop",
+		"intensity": 2
+	},
+	{
+		"filename": "Borrtex - Falling Into Presence",
+		"category": "Ambience",
+		"subcategory": "Introspection",
+		"label": "Label",
+		"title": "Borrtex - Falling Into Presence",
+		"intensity": 2
+	},
+	{
+		"filename": "Vampire Redemption - Dark Ages Magic Store 2",
+		"category": "Ambience",
+		"subcategory": "Mystery",
+		"label": "Glamour is afoot",
+		"title": "Vampire Redemption - Dark Ages Magic Store 2",
+		"intensity": 2
+	},
+	{
+		"filename": "Dessin Bizarre - Shapes",
+		"category": "Ambience",
+		"subcategory": "Mystery",
+		"label": "Shapes",
+		"title": "Dessin Bizarre - Shapes",
+		"intensity": 1
+	},
+	{
+		"filename": "Cave",
+		"category": "Ambience",
+		"subcategory": "Soundscapes",
+		"label": "Cave",
+		"title": "Cave",
+		"intensity": 1
+	},
+	{
+		"filename": "Desert",
+		"category": "Ambience",
+		"subcategory": "Soundscapes",
+		"label": "Desert",
+		"title": "Desert",
+		"intensity": 1
+	},
+	{
+		"filename": "Forest",
+		"category": "Ambience",
+		"subcategory": "Soundscapes",
+		"label": "Forest",
+		"title": "Forest",
+		"intensity": 1
+	},
+	{
+		"filename": "Night Campfire",
+		"category": "Ambience",
+		"subcategory": "Soundscapes",
+		"label": "Night Campfire",
+		"title": "Night Campfire",
+		"intensity": 1
+	},
+	{
+		"filename": "Night Crickets",
+		"category": "Ambience",
+		"subcategory": "Soundscapes",
+		"label": "Night Crickets",
+		"title": "Night Crickets",
+		"intensity": 1
+	},
+	{
+		"filename": "Borrtex - The Bright Morning Star",
+		"category": "Ambience",
+		"subcategory": "Wonder",
+		"label": "The Bright Morning Star",
+		"title": "Borrtex - The Bright Morning Star",
+		"intensity": 2
+	},
+	{
+		"filename": "Sid Acharya - Falling Through The Hourglass",
+		"category": "Ambience",
+		"subcategory": "TBD",
+		"label": "Sid Acharya - Falling Through The Hourglass",
+		"title": "Sid Acharya - Falling Through The Hourglass",
+		"intensity": 2
+	}
+]

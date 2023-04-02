@@ -1,42 +1,41 @@
 <template>
-	<div id="global" :class="[currentCategory, { mounted }]">
+	<div id="global" :class="[currentCategory, 'mounted']">
 		<div class="tabs">
 			<div
-				v-for="category in availableCategories"
-				:key="category.id"
-				:class="['tab', category.id, { active: currentCategory === category.id }]"
-				@click="setCategory(category.id)"
-				@dblclick="songTitleMode = !songTitleMode"
+				v-for="category in categories"
+				:key="category"
+				:class="['tab', category.toLowerCase(), { active: isMounted && currentCategory === category }]"
+				@click="setCategory(category)"
+				@dblclick="toggleLabelMode()"
 			>
-				<img :src="category.icon" height="50" width="50" />
-				<div class="label">{{ category.label }}</div>
+				<img :src="icons[category]" height="50" width="50" />
+				<div class="label">{{ category }}</div>
 			</div>
 		</div>
 		<main>
 			<div class="inner">
-				<section v-for="category in availableCategories" :key="category.id" :class="[category.id, { active: currentCategory === category.id }]">
-					<h2>{{ category.label }}</h2>
-					<div class="list">
-						<div class="subcategory" v-for="subcategory in subcategories[currentCategory]">
+				<div class="list" v-if="isMounted">
+					<section v-for="(tracks, subcategory) in sortedTracks[currentCategory]" :key="subcategory">
+						<div class="subcategory">
 							<h3>{{ subcategory }}</h3>
 							<div
-								v-for="track in orderedTracks[category.id][subcategory]"
-								:class="['track', { active: currentTrack.id === track.id }]"
-								@click="playTrack(track.id)"
-								:key="track.id"
+								v-for="track in tracks"
+								:class="['track', { active: currentTrack.filename === track.filename }]"
+								@click="playTrack(track.filename)"
+								:key="track.filename"
 							>
 								<div class="bg">
 									<div class="normal"></div>
 									<div class="hover"></div>
 									<div class="active"></div>
 								</div>
-								<span class="label" v-if="songTitleMode">{{ track.title }}</span>
-								<span class="label" v-if="!songTitleMode">{{ track.label }}</span>
-								<span v-if="category.id === 'ambience'" :class="`intensity int_${track.intensity}`">{{ track.intensity }}</span>
+								<span class="label" v-if="labelMode === 'title'">{{ track.title }}</span>
+								<span class="label" v-if="labelMode === 'label'">{{ track.label }}</span>
+								<span v-if="currentCategory === 'Ambience'" :class="`intensity int_${track.intensity}`">{{ track.intensity }}</span>
 							</div>
 						</div>
-					</div>
-				</section>
+					</section>
+				</div>
 			</div>
 		</main>
 		<div class="player">
@@ -46,98 +45,112 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import icon_themes from "~/assets/img/category_themes.png";
 import icon_ambience from "~/assets/img/category_ambience.png";
 import icon_characters from "~/assets/img/category_characters.png";
 import icon_locations from "~/assets/img/category_locations.png";
 import icon_action from "~/assets/img/category_action.png";
 
-export default {
-	data() {
-		return {
-			tracks: useTracks(),
-			currentTrack: { id: "", title: "", filepath: "" },
-			currentCategory: "ambience",
-			icons: {
-				themes: icon_themes,
-				ambience: icon_ambience,
-				characters: icon_characters,
-				locations: icon_locations,
-				action: icon_action,
-			},
-			availableCategories: {},
-			mounted: false,
-			songTitleMode: false,
-		};
-	},
-	computed: {
-		categories() {
-			const out = this.tracks.map((t) => t.category);
-			return [...new Set(out)];
-		},
-		subcategories() {
-			const out = {};
+import action from "/assets/data/tracks_action.json";
+import ambience from "/assets/data/tracks_ambience.json";
+import characters from "/assets/data/tracks_characters.json";
+import locations from "/assets/data/tracks_locations.json";
+import themes from "/assets/data/tracks_themes.json";
 
-			for (const track of this.tracks) {
-				const { category, subcategory } = track;
+const icons = { Themes: icon_themes, Ambience: icon_ambience, Characters: icon_characters, Locations: icon_locations, Action: icon_action };
+const isMounted = ref(false);
+const tracks = ref([...action, ...ambience, ...characters, ...locations, ...themes]);
 
-				if (typeof out[category] === "undefined") {
-					out[category] = [];
-				}
+const categories = computed(() => {
+	return Array.from(new Set(tracks.value.map((t) => t.category))).sort();
+});
 
-				if (!out[category].includes(subcategory)) {
-					out[category].push(subcategory);
-				}
-			}
+/* const subcategories = computed(() => {
+	const subcategoriesMapping = [];
 
-			return out;
-		},
-		orderedTracks() {
-			let out = {};
-			for (const track of this.tracks) {
-				const { category, subcategory } = track;
+	tracks.value.forEach((track) => {
+		const subcategoryExists = subcategoriesMapping.some((s) => s.parent === track.category && s.name === track.subcategory);
+		if (!subcategoryExists) {
+			subcategoriesMapping.push({ parent: track.category, name: track.subcategory });
+		}
+	});
 
-				if (typeof out[category] === "undefined") {
-					out[category] = {};
-				}
+	console.log(subcategoriesMapping);
+	return subcategoriesMapping;
+}); */
 
-				if (typeof out[category][subcategory] === "undefined") {
-					out[category][subcategory] = [];
-				}
+const sortedTracks = computed(() => {
+	function sortBySubcategory(a, b) {
+		if (a.subcategory > b.subcategory) {
+			return 1;
+		} else if (a.subcategory < b.subcategory) {
+			return -1;
+		}
+		return 0;
+	}
 
-				out[category][subcategory].push(track);
-			}
+	function sortByLabel(a, b) {
+		if (a.label > b.label) {
+			return 1;
+		} else if (a.label < b.label) {
+			return -1;
+		}
+		return 0;
+	}
 
-			return out;
-		},
-	},
-	methods: {
-		setCategory(to) {
-			this.currentCategory = to;
-		},
-		getAvailableCategories() {
-			if (this.categories) {
-				this.availableCategories = ["themes", "ambience", "characters", "locations", "action"]
-					.map((c) => {
-						if (this.categories.includes(c)) {
-							return { id: c, label: c, icon: this.icons[c] };
-						}
-						return null;
-					})
-					.filter(Boolean);
-			}
-		},
-		playTrack(id) {
-			const track = this.tracks.find((t) => t.id === id);
-			this.currentTrack = { id: track.id, title: track.title, filepath: track.filepath };
-		},
-	},
-	mounted() {
-		this.getAvailableCategories();
-		this.mounted = true;
-	},
-};
+	let out = {};
+
+	const _sortedTracks = tracks.value.sort(sortByLabel).sort(sortBySubcategory);
+
+	_sortedTracks.forEach((track) => {
+		const { category, subcategory } = track;
+
+		if (!out[category]) {
+			out[category] = {};
+		}
+
+		if (!out[category][subcategory]) {
+			out[category][subcategory] = [];
+		}
+
+		if (!track.label || track.label === "Label") {
+			track.label = track.title;
+		}
+		out[category][subcategory].push({ ...track });
+	});
+
+	return out;
+});
+
+console.log(sortedTracks.value);
+
+const currentCategory = ref("Ambience");
+
+const labelMode = "label";
+
+function toggleLabelMode() {
+	if (labelMode.value === "label") {
+		labelMode.value = "title";
+	} else {
+		labelMode.value = "label";
+	}
+}
+
+const currentTrack = ref({ id: "", title: "", filepath: "" });
+
+function playTrack(filename) {
+	const track = this.tracks.find((t) => t.filename === filename);
+	this.currentTrack = { title: track.title, filepath: `/music/${track.filename}.mp3` };
+}
+
+function setCategory(to) {
+	currentCategory.value = to;
+}
+
+onMounted(() => {
+	isMounted.value = true;
+});
 </script>
 
 <style lang="scss">

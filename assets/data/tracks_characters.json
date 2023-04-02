@@ -1,0 +1,74 @@
+[
+	{
+		"filename": "Song of the Sea - Mother_s Portrait",
+		"category": "Characters",
+		"subcategory": "Ariel",
+		"label": "Ariel",
+		"title": "Song of the Sea - Mother_s Portrait",
+		"intensity": 1
+	},
+	{
+		"filename": "Little Big Town - Happy People",
+		"category": "Characters",
+		"subcategory": "Ariel",
+		"label": "Label",
+		"title": "Little Big Town - Happy People",
+		"intensity": 1
+	},
+	{
+		"filename": "Cyprinid - Floating",
+		"category": "Characters",
+		"subcategory": "Ariel",
+		"label": "Scrying the Past, using Chronos 1",
+		"title": "Cyprinid - Floating",
+		"intensity": 1
+	},
+	{
+		"filename": "Heroes 3 - Castle Theme",
+		"category": "Characters",
+		"subcategory": "Lucas",
+		"label": "Castle",
+		"title": "Heroes 3 - Castle Theme",
+		"intensity": 3
+	},
+	{
+		"filename": "Flandy",
+		"category": "Characters",
+		"subcategory": "Lucas",
+		"label": "Fireflies, using Summer 1",
+		"title": "Flandy",
+		"intensity": 3
+	},
+	{
+		"filename": "Heroes 3 - Rempart Theme",
+		"category": "Characters",
+		"subcategory": "Lucas",
+		"label": "Lucas",
+		"title": "Heroes 3 - Rempart Theme",
+		"intensity": 3
+	},
+	{
+		"filename": "TB",
+		"category": "Characters",
+		"subcategory": "NPCs",
+		"label": "Achak",
+		"title": "TB",
+		"intensity": 3
+	},
+	{
+		"filename": "Juno Reactor - Angels and Men",
+		"category": "Characters",
+		"subcategory": "NPCs",
+		"label": "Nemeroth",
+		"title": "Juno Reactor - Angels and Men",
+		"intensity": 2
+	},
+	{
+		"filename": "Vampire Redemption - Modern Day Magic Store",
+		"category": "Characters",
+		"subcategory": "School People",
+		"label": "Patrick Carlone + Bullies",
+		"title": "Vampire Redemption - Modern Day Magic Store",
+		"intensity": 3
+	}
+]

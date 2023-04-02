@@ -1,6 +1,7 @@
 <template>
 	<Login v-if="!firebaseUser" @handleLogin="handleUser" />
-	<ThePlaylist v-if="firebaseUser" />
+	<!-- <ThePlaylist v-if="firebaseUser" /> -->
+	<ThePlaylist />
 </template>
 
 <script setup>

@@ -140,7 +140,7 @@ function toggleLabelMode() {
 const currentTrack = ref({ id: "", title: "", filepath: "" });
 
 function playTrack(filename) {
-	const track = this.tracks.find((t) => t.filename === filename);
+	const track = tracks.value.find((t) => t.filename === filename);
 	this.currentTrack = { title: track.title, filepath: `/music/${track.filename}.mp3` };
 }
 
